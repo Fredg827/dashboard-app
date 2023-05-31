@@ -44,22 +44,6 @@ const Home = async () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://github.com/codatio/starter-project-nextjs-codat"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            starter-project-nextjs-codat
-          </a>
-        </div>
-      </div>
-
       <h1 className={styles.center}>Codat X Next.js</h1>
 
       <p>
