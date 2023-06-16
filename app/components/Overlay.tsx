@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface CompanyDetails {
@@ -18,11 +18,14 @@ const Overlay = ({ companyId, onClose }: OverlayProps) => {
   );
   const router = useRouter();
 
+  // const { overlayOpen } = router.query;
+
+  console.log("hello from overlay");
+
   useEffect(() => {
     const fetchCompanyDetails = async () => {
       try {
-        // Make the API request to fetch company details
-        const response = await fetch(`/api/company?companyId=${companyId}`);
+        const response = await fetch(`/company?companyId=${companyId}`);
         if (response.ok) {
           const data = await response.json();
           setCompanyDetails(data);
@@ -54,7 +57,7 @@ const Overlay = ({ companyId, onClose }: OverlayProps) => {
         <h2>{companyDetails.name}</h2>
         <p>Last Pull: {companyDetails.lastPull}</p>
         <p>Created: {companyDetails.created}</p>
-        {/* Add additional company details here */}
+        {/* recharts for P&L? */}
         <button onClick={handleOverlayClose}>Close</button>
       </div>
     </div>
