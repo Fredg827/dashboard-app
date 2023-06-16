@@ -5,8 +5,8 @@ import { ListCompaniesResponse } from "@codat/common/dist/sdk/models/operations"
 
 import styles from "./page.module.css";
 
-import NavBar from "./components/NavBar";
-import CompaniesList from "./components/CompaniesList";
+import NavBar from "../components/NavBar";
+import CompaniesList from "../components/CompaniesList";
 
 export const revalidate = 60;
 
@@ -36,8 +36,6 @@ const getData = async () => {
 const Home = async () => {
   const companies = await getData();
 
-  const latestCompanies = companies?.results.slice(0, 5)
-
   return (
     <>
       <NavBar />
@@ -45,7 +43,7 @@ const Home = async () => {
       <main className={styles.main}>
         <h2 className={`${styles.center} ${styles.title}`}>Companies</h2>
 
-        <CompaniesList companies={latestCompanies}/>
+        <CompaniesList companies={companies?.results}/>
       </main>
     </>
   );
