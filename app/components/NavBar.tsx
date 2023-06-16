@@ -1,8 +1,12 @@
+"use client"
+
 import React from "react";
+
+import Link from "next/link";
+
 import { Box, AppBar, Toolbar, Button } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import BusinessIcon from "@mui/icons-material/Business";
-import Link from "next/link";
 
 const NavBar: React.FC = () => {
   return (
@@ -15,7 +19,7 @@ const NavBar: React.FC = () => {
             <Link href="/">Home</Link>
           </Button>
           <Button color="inherit" sx={{ flex: 1 }} startIcon={<BusinessIcon />}>
-            <Link href="/company">Companies</Link>
+            <Link href="/companies">Companies</Link>
           </Button>
         </Toolbar>
       </AppBar>
