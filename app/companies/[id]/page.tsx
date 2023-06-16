@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./page.module.css";
@@ -36,7 +35,7 @@ const CompanyPage = async ({ params }: { params: { id: string } }) => {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
+          Get started by sdefsvsdvsdv&nbsp;
           <code className={styles.code}>app/companies/[id]/page.tsx</code>
         </p>
         <div>
